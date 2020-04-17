@@ -1,0 +1,49 @@
+<div class="card" [ngClass]="theme === 'dark' ? 'card--dark' : 'card--light'">
+  <div class="card__title">
+    <div class="card__title__thumbnail">R</div>
+    <div class="card__title__headers">
+      <span class="header">{{ data.header }}</span>
+      <span class="subhead">{{ data.subhead }}</span>
+    </div>
+  </div>
+  <div class="card__media">
+    <img src="../../../assets/media.jpg" alt="paella image" />
+  </div>
+  <div class="card__body">
+    <p class="card__body__desc">{{ data.desc }}</p>
+  </div>
+  <div class="card__actions">
+    <div class="card__actions__icons">
+      <span
+        class="material-icons favorite"
+        [ngClass]="hearted ? 'hearted' : ''"
+        (click)="toggleHearted()"
+      >
+        favorite
+      </span>
+      <span class="material-icons">
+        share
+      </span>
+    </div>
+    <div class="card__actions__buttons">
+      <span
+        class="material-icons"
+        [ngClass]="shouldCollapse ? 'collapse' : ''"
+        (click)="toggleCollapse()"
+      >
+        expand_less
+      </span>
+    </div>
+  </div>
+
+  <div
+    class="card__content"
+    [ngStyle]="{'max-height.px':shouldCollapse? 0 : contentHeight}"
+    #content
+  >
+    <ng-container *ngIf="data.content">
+      <p *ngFor="let p of data.content">{{ p }}</p>
+    </ng-container>
+    <p></p>
+  </div>
+</div>

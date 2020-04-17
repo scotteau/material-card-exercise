@@ -1,0 +1,133 @@
+
+
+.card {
+  min-width: 350px;
+  max-width: 390px;
+  font-family: "Roboto", sans-serif;
+  background: white;
+  margin: 4rem;
+  border-radius: 0.5rem;
+  height: max-content;
+}
+.card__title {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+.card__title__thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  background: #dd5e89;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f7bb97, #dd5e89);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f7bb97, #dd5e89);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.card__title__headers {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.card__title__headers .header {
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding-bottom: 0.2rem;
+}
+.card__title__headers .subhead {
+  color: gray;
+  font-size: 0.9rem;
+}
+.card__media img {
+  width: 100%;
+}
+.card__body {
+  padding: 1.2rem;
+  color: gray;
+}
+.card__body__desc {
+  line-height: 1.5;
+}
+.card__actions {
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+  padding: 1rem 0;
+}
+.card__actions span {
+  background-position: center;
+  transition: background 0.8s;
+  margin-right: 1rem;
+  padding: 12px;
+  border-radius: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+.card__actions span:hover {
+  background: #e8e8e8 radial-gradient(circle, transparent 1%, #e8e8e8 1%) center/15000%;
+}
+.card__actions span:active {
+  background-color: #ffffff;
+  background-size: 100%;
+  transition: background 0s;
+}
+.card__actions__buttons span {
+  transition: all 0.4s ease-in-out;
+}
+.card__actions .collapse {
+  transform: rotateZ(180deg);
+}
+.card__content {
+  margin: 0 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+.card__content p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: gray;
+}
+
+.card--dark {
+  background: #424242;
+}
+.card--dark .card__title__headers .header {
+  color: white;
+}
+.card--dark .card__title__headers .subhead {
+  color: lightgray;
+}
+.card--dark .card__body {
+  color: lightgray;
+}
+.card--dark .card__actions {
+  color: lightgray;
+}
+.card--dark .card__actions span:hover {
+  background: #606060 radial-gradient(circle, transparent 1%, #606060 1%) center/15000%;
+}
+.card--dark .card__actions span:active {
+  background-color: #bdbdbd;
+  background-size: 100%;
+  transition: background 0s;
+}
+.card--dark .card__content p {
+  color: lightgray;
+}
+
+.hearted {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
